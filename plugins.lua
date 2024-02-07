@@ -7,8 +7,17 @@ local plugins = {
     commit = "f2778bd1a28b74adf5b1aa51aa57da85adfa3d16",
   },
 
-  {"elkowar/yuck.vim", lazy = false},
-
+  { "elkowar/yuck.vim",               lazy = false },
+  { "terrastruct/d2-vim",             lazy = false },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
   -- {
   --   "akinsho/flutter-tools.nvim",
   --   lazy = false,
