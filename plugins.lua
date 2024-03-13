@@ -51,6 +51,7 @@ local plugins = {
         "html-lsp",
         "prettier",
         "stylua",
+        "gopls",
       },
     },
   },
